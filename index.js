@@ -113,7 +113,6 @@ class CreateConfigListDeleteClfR2
 (async function()
 {
     const fs = require("fs");
-    //const cwd = process.cwd();
     const inputConfigJsonFilePath = "config.json";           
     const inputConfig = JSON.parse(fs.readFileSync(inputConfigJsonFilePath));
     const credentials = inputConfig.credentials;
