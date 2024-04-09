@@ -1,4 +1,4 @@
-## Create-Configure-List-Delete-CLF-R2-With-AWS-SDK-JS-V3
+### Cloudflare-R2-Bucket-With-AWS-SDK-JS-V3
 
 <br>
 <strong>
@@ -18,7 +18,7 @@ The  script can execute the followings:
 <br>
 
 ### Diagram Depicting R2 Bucket Information and Settings on Cloudflare R2 Console.
-![Image description](https://github.com/MongoExpUser/Create-Configure-List-Delete-CLF-R2-With-AWS-SDK-JS-V3/blob/main/clf-r2.png)
+![Image description](https://github.com/MongoExpUser/Cloudflare-R2-Bucket-With-AWS-SDK-JS-V3/blob/main/clf-r2.png)
 
 ## PURPOSE
 
