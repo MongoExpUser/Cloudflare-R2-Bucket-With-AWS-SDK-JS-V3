@@ -17,6 +17,9 @@ The  script can execute the followings:
 
 <br>
 
+### Diagram Depicting R2 BUcket Information and Settings on Cloudflare R2 Console.
+![Image description](https://github.com/MongoExpUser/Create-Configure-List-Delete-CLF-R2-With-AWS-SDK-JS-V3/blob/main/r2-clf.png)
+
 ## PURPOSE
 
 * Normally, R2 bucket can be create/deployed, configured, listed and deleted on the Cloudflare console or via Cloudflare CLI (Wrangler). <br>
