@@ -64,7 +64,7 @@ class CreateConfigListDeleteClfR2
         {
             const command = new ListBucketsCommand('');
             const response = await client.send(command);
-            await ccld.prettyPrint(response); // or console.log(response);
+            await ccld.prettyPrint(response); 
         }
 
         if(createBucket === true)
