@@ -1,0 +1,19 @@
+{
+    "inputActions" : {
+        "listBucket" : false,
+        "createBucket" : true,
+        "putBucketLifecycleConfig" : true,
+        "deleteBucket" : false,
+        "expirationDays" : 365,
+        "abortDays" : 1,
+        "id" : "my-id",
+        "statusOne" : "Enabled",
+        "statusTwo" : "Disabled",
+        "bucketName": "bucket-name"
+    },
+    "credentials" : {
+        "accessKeyId" : "cloudflare-access-key-id",
+        "secretAccessKey" : "cloudflare-secret-access-key",
+        "accountId" : "cloudflare-account-id"
+    }
+}
