@@ -21,7 +21,7 @@
 # **************************************************************************************************************************************/
 
 
-//const { getSignedUrl } = require("@aws-sdk/s3-request-presigner");
+
 const { S3Client, ListBucketsCommand, ListObjectsV2Command, 
         GetObjectCommand, PutObjectCommand, CreateBucketCommand, 
         DeleteBucketCommand, PutBucketLifecycleConfigurationCommand } = require("@aws-sdk/client-s3");
