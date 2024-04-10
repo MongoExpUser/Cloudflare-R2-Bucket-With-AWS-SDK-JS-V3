@@ -7,13 +7,13 @@ Create/Deploy, Configure, List and Delete  Cloudflare R2 Bucket (Object Storage)
 <br><br>
 The  script can execute the followings:
 
-  1) Create/deploy R2 bucket specified in the JSON input file.
+  1) Create/deploy R2 buckets specified in the JSON input file.
   
-  2) Put/Add Lifecycle Configuration to the R2 bucket.
+  2) Put/Add Lifecycle Configuration to the R2 buckets.
   
-  3) List content of the R2 bucket.
+  3) List all R2 buckets.
 
-  4) Delete the R2 bucket.
+  4) Delete specified R2 buckets.
 
 <br>
 
