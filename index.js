@@ -89,7 +89,7 @@ class CreateConfigListDeleteClfR2
 
                 if(createBucket[index] === true)
                 {
-                    console.log("Creating bucket name:", bucketName[index]);
+                    console.log("Creating bucket named:", bucketName[index]);
                     const input = { Bucket : bucketName[index]}
                     const command = new CreateBucketCommand(input);
                     const response = await client.send(command);
@@ -98,7 +98,7 @@ class CreateConfigListDeleteClfR2
 
                 if(putBucketLifecycleConfig[index] === true)
                 {
-                    console.log("Creating/putting bucket life cycle configuration for buket name:", bucketName[index]);
+                    console.log("Creating/putting bucket life cycle configuration for buket named:", bucketName[index]);
                     const input = {
                       Bucket: bucketName[index],
                       LifecycleConfiguration: {
@@ -120,7 +120,7 @@ class CreateConfigListDeleteClfR2
 
                 if(deleteBucket[index] === true)
                 {
-                    console.log("Deleting bucket name:", bucketName[index]);
+                    console.log("Deleting bucket named:", bucketName[index]);
                     const input = { Bucket : bucketName[index] }
                     const command = new DeleteBucketCommand(input);
                     const response = await client.send(command);
