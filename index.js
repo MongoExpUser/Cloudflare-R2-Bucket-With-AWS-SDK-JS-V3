@@ -136,7 +136,7 @@ class CreateConfigListDeleteClfR2
 (async function()
 {
     const fs = require("fs");
-    const inputConfigJsonFilePath = "/Users/olur7274/desktop/all/cloudflare/config.json";           
+    const inputConfigJsonFilePath = "config.json";           
     const inputConfig = JSON.parse(fs.readFileSync(inputConfigJsonFilePath));
     const credentials = inputConfig.credentials;
     const inputActions = inputConfig.inputActions;
