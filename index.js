@@ -69,7 +69,7 @@ class CreateConfigListDeleteClfR2
         const il = id.length;
         const so = statusOne.length;
         const st = statusTwo.length;
-        const confirm = (bn == pb) && (bn == db) && (bn == cb)  && (bn == ep) && (bn == ab) && (bn == il) && (bn == so) && (bn == st);
+        const confirm = (bn === pb) && (bn === db) && (bn === cb)  && (bn === ep) && (bn === ab) && (bn === il) && (bn === so) && (bn === st);
 
 
         if(confirm === true)
