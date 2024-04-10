@@ -59,52 +59,75 @@ class CreateConfigListDeleteClfR2
         const id = inputActions.id;
         const statusOne = inputActions.statusOne; 
         const statusTwo = inputActions.statusTwo; 
+        
+        const cb = createBucket.length;
+        const pb = putBucketLifecycleConfig.length; 
+        const db = deleteBucket.length;
+        const bn = bucketName.length;
+        const ep = expirationDays.length;
+        const ab = abortDays.length;
+        const il = id.length;
+        const so = statusOne.length;
+        const st = statusTwo.length;
+        const confirm = (bn == pb) && (bn == db) && (bn == cb)  && (bn == ep) && (bn == ab) && (bn == il) && (bn == so) && (bn == st);
 
-        if(listBucket === true)
-        {
-            const command = new ListBucketsCommand('');
-            const response = await client.send(command);
-            await ccld.prettyPrint(response); 
+
+        if(confirm === true)
+        { 
+            for(let index = 0; index < bn; index++)
+            {
+                if(listBucket === true)
+                {
+                    const input = {};
+                    const command = new ListBucketsCommand(input);
+                    const response = await client.send(command);
+                    await ccld.prettyPrint(response); 
+                }
+
+                if(createBucket[index] === true)
+                {
+                    console.log("Creating bucket name:", bucketName[index]);
+                    const input = { Bucket : bucketName[index]}
+                    const command = new CreateBucketCommand(input);
+                    const response = await client.send(command);
+                    await ccld.prettyPrint(response);
+                }
+
+                if(putBucketLifecycleConfig[index] === true)
+                {
+                    console.log("Creating/putting bucket life cycle configuration for buket name:", bucketName[index]);
+                    const input = {
+                      Bucket: bucketName[index],
+                      LifecycleConfiguration: {
+                        Rules: [ 
+                          {
+                            Status: statusOne[index],
+                            ID: id[index],
+                            Expiration: { Days: expirationDays[index] },
+                            AbortIncompleteMultipartUpload: { DaysAfterInitiation: abortDays[index] }
+                          } 
+                        ]
+                      }
+                    };
+
+                    const command = new PutBucketLifecycleConfigurationCommand(input);
+                    const response = await client.send(command);
+                    await ccld.prettyPrint(response);
+                }
+
+                if(deleteBucket[index] === true)
+                {
+                    console.log("Deleting bucket name:", bucketName[index]);
+                    const input = { Bucket : bucketName[index] }
+                    const command = new DeleteBucketCommand(input);
+                    const response = await client.send(command);
+                    await ccld.prettyPrint(response);
+                }
+            }
         }
-
-        if(createBucket === true)
+        else
         {
-            console.log("Creating bucket");
-            const input = { Bucket : bucketName}
-            const command = new CreateBucketCommand(input);
-            const response = await client.send(command);
-            await ccld.prettyPrint(response);
-        }
-
-        if(putBucketLifecycleConfig === true)
-        {
-            console.log("Creating/putting bucket life cycle configuration");
-            const input = {
-              Bucket: bucketName,
-              LifecycleConfiguration: {
-                Rules: [ 
-                  {
-                    Status: statusOne,
-                    ID: id,
-                    Expiration: { Days: expirationDays },
-                    AbortIncompleteMultipartUpload: { DaysAfterInitiation: abortDays }
-                  } 
-                ]
-              }
-            };
-
-            const command = new PutBucketLifecycleConfigurationCommand(input);
-            const response = await client.send(command);
-            await ccld.prettyPrint(response);
-        }
-
-        if(deleteBucket === true)
-        {
-            console.log("Deleting bucket");
-            const input = { Bucket : bucketName }
-            const command = new DeleteBucketCommand(input);
-            const response = await client.send(command);
-            await ccld.prettyPrint(response);
+            return console.log("Length of the input List/Array must be equal!")
         }
     }
 }
@@ -113,12 +136,10 @@ class CreateConfigListDeleteClfR2
 (async function()
 {
     const fs = require("fs");
-    const inputConfigJsonFilePath = "config.json";           
+    const inputConfigJsonFilePath = "/Users/olur7274/desktop/all/cloudflare/config.json";           
     const inputConfig = JSON.parse(fs.readFileSync(inputConfigJsonFilePath));
     const credentials = inputConfig.credentials;
     const inputActions = inputConfig.inputActions;
     const ccld = new CreateConfigListDeleteClfR2();
     await ccld.bucketActions(inputActions, credentials);
 }());
-
-
