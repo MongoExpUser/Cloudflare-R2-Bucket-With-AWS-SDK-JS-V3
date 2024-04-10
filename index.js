@@ -60,6 +60,7 @@ class CreateConfigListDeleteClfR2
         const statusOne = inputActions.statusOne; 
         const statusTwo = inputActions.statusTwo; 
         
+        const lb = listBucket.length;
         const cb = createBucket.length;
         const pb = putBucketLifecycleConfig.length; 
         const db = deleteBucket.length;
@@ -69,14 +70,16 @@ class CreateConfigListDeleteClfR2
         const il = id.length;
         const so = statusOne.length;
         const st = statusTwo.length;
-        const confirm = (bn === pb) && (bn === db) && (bn === cb)  && (bn === ep) && (bn === ab) && (bn === il) && (bn === so) && (bn === st);
+        const confirm = (bn === lb) && (bn === pb) && (bn === db) && 
+                        (bn === cb) && (bn === ep) && (bn === ab) && 
+                        (bn === il) && (bn === so) && (bn === st);
 
 
         if(confirm === true)
         { 
             for(let index = 0; index < bn; index++)
             {
-                if(listBucket === true)
+                if(listBucket[index] === true)
                 {
                     const input = {};
                     const command = new ListBucketsCommand(input);
