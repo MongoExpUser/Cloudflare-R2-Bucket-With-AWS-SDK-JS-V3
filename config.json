@@ -7,10 +7,10 @@
         "deleteBucket" : [false, false],
         "expirationDays" : [365, 90],
         "abortDays" : [1, 1],
-        "id" : ["expire-and-abort-1", "expire-and-abort-2"],
+        "id" : ["id-1", "id-2"],
         "statusOne" : ["Enabled", "Enabled"],
         "statusTwo" : ["Disabled", "Disabled"],
-        "bucketName": ["eco-mya-bck", "eco-myb-bck"]
+        "bucketName": ["bck-1", "bck-2"]
     },
     "credentials" : {
         "accessKeyId" : "cloudflare-access-key-id",
