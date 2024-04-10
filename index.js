@@ -98,7 +98,7 @@ class CreateConfigListDeleteClfR2
 
                 if(putBucketLifecycleConfig[index] === true)
                 {
-                    console.log("Creating/putting bucket life cycle configuration for buket named:", bucketName[index]);
+                    console.log("Creating/putting bucket life cycle configuration for bucket named:", bucketName[index]);
                     const input = {
                       Bucket: bucketName[index],
                       LifecycleConfiguration: {
