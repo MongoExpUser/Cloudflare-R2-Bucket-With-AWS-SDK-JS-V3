@@ -1,15 +1,16 @@
 {
-    "inputActions" : {
-        "listBucket" : false,
-        "createBucket" : true,
-        "putBucketLifecycleConfig" : true,
-        "deleteBucket" : false,
-        "expirationDays" : 365,
-        "abortDays" : 1,
-        "id" : "my-id",
-        "statusOne" : "Enabled",
-        "statusTwo" : "Disabled",
-        "bucketName": "bucket-name"
+"inputActions" : {
+        "listBucket" : true,
+        " // the length of the array values below must be equal" : "equality",
+        "createBucket" : [true, true],
+        "putBucketLifecycleConfig" : [true, true],
+        "deleteBucket" : [false, false],
+        "expirationDays" : [365, 180],
+        "abortDays" : [1, 1],
+        "id" : ["lc-rule-1", "lc-rule-2"],
+        "statusOne" : ["Enabled", "Enabled"],
+        "statusTwo" : ["Disabled", "Disabled"],
+        "bucketName": ["proj-bck-1", "proj-bck-2"]
     },
     "credentials" : {
         "accessKeyId" : "cloudflare-access-key-id",
