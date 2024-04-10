@@ -1,16 +1,16 @@
 {
-"inputActions" : {
-        "listBucket" : true,
+    "inputActions" : {
         " // the length of the array values below must be equal" : "equality",
+        "listBucket" : [true, true],
         "createBucket" : [true, true],
-        "putBucketLifecycleConfig" : [true, true],
+        "putBucketLifecycleConfig" : [false, false],
         "deleteBucket" : [false, false],
-        "expirationDays" : [365, 180],
+        "expirationDays" : [365, 90],
         "abortDays" : [1, 1],
-        "id" : ["lc-rule-1", "lc-rule-2"],
+        "id" : ["expire-and-abort-1", "expire-and-abort-2"],
         "statusOne" : ["Enabled", "Enabled"],
         "statusTwo" : ["Disabled", "Disabled"],
-        "bucketName": ["proj-bck-1", "proj-bck-2"]
+        "bucketName": ["eco-mya-bck", "eco-myb-bck"]
     },
     "credentials" : {
         "accessKeyId" : "cloudflare-access-key-id",
