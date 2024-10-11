@@ -11,7 +11,7 @@
 #  * @License Ends                                                                                                                      *
 #  **************************************************************************************************************************************
 # *                                                                                                                                     *
-# *  Project: Deploy and Configure Cloudflae Object Storage R2 Project                                                                  *
+# *  Project: Deploy and Configure Cloudflare Object Storage R2 Project                                                                  *
 # *                                                                                                                                     *
 # *  This module can:                                                                                                                   *
 # *                                                                                                                                     *
