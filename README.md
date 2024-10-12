@@ -57,5 +57,11 @@ The  script can execute the followings:
 
 4) #### Then run the code, assuming sudo access: <br>
    * sudo node index.js <br><br>
-   
+
+
+# License
+
+Copyright © 2024. MongoExpUser
+
+Licensed under the MIT license.
    
