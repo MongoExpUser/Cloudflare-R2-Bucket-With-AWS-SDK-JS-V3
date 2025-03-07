@@ -2,7 +2,7 @@
 
 <br>
 <strong>
-Create/Deploy, Configure, List and Delete  Cloudflare R2 Bucket (Object Storage) with AWS SDK for JavaScript/NodeJS V3.
+Create/Deploy, Configure, List and Delete Cloudflare R2 Bucket (Object Storage) with AWS SDK for JavaScript/NodeJS V3.
 </strong>
 <br><br>
 The  script can execute the followings:
@@ -30,9 +30,9 @@ The  script can execute the followings:
     
 * <strong>This repository</strong> contains code for creating/deploying, configuring, listing and deleting cloudflare R2 bucket (object storage) via AWS SDK for JavaScript/NodeJS V3, from any computer. <br>
     
-* AWS SDK for JavaScript/NodeJS V3 is clean, light weight, fast and it fully supports async-await syntax. <br>
+* AWS SDK for JavaScript/NodeJS V3 is clean, lightweight, fast and it fully supports the async-await syntax. <br>
 
-* Also, cloudflare R2 bucket has lower storage cost with no egress fee, which makes it attractive to developers for storage.
+* Also, cloudflare R2 bucket has lower storage cost and no egress fee, which makes it attractive to developers for storage.
     
     
 ## RUNNING the NodeJS script
@@ -47,6 +47,7 @@ The  script can execute the followings:
     * echo "deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_21.x nodistro main" | sudo tee /etc/apt/sources.list.d/nodesource.list <br>
     * sudo apt-get -y update <br>
     * sudo apt-get install -y nodejs <br>
+    * sudo npm install @aws-sdk/client-s3
     
 2) #### Download or clone the following files, from this repo, into the current working directory (CWD): <br>
    * NodeJS script:  index.js <br>
