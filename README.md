@@ -22,17 +22,17 @@ The  script can execute the followings:
 
 ## PURPOSE
 
-* Normally, R2 bucket can be create/deployed, configured, listed and deleted on the Cloudflare console or via Cloudflare CLI (Wrangler). <br>
+* Normally, R2 bucket can be created/deployed, configured, listed and deleted on the Cloudflare console or via Cloudflare CLI (Wrangler). <br>
     
 * R2 bucket can also be deployed via AWS SDK in any language of choice, especially for those who: <br>
   1) Are already familiar with AWS SDK and <br>
-  2) Want to create, configure, list and delete large number of buckets programatically.<br>
+  2) Want to create, configure, list and delete <strong>large number of buckets </strong> programatically.<br>
     
 * <strong>This repository</strong> contains code for creating/deploying, configuring, listing and deleting cloudflare R2 bucket (object storage) via AWS SDK for JavaScript/NodeJS V3, from any computer. <br>
     
 * AWS SDK for JavaScript/NodeJS V3 is clean, lightweight, fast and it fully supports the async-await syntax. <br>
 
-* Also, cloudflare R2 bucket has lower storage cost and no egress fee, which makes it attractive to developers for storage.
+* Also, cloudflare R2 bucket has <strong>lower storage cost </strong> and <strong> no egress fee </strong>, which makes it attractive to developers for object storage.
     
     
 ## RUNNING the NodeJS script
