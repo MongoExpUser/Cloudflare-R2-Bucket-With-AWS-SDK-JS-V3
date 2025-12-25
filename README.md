@@ -53,7 +53,7 @@ The  script can execute the followings:
    * NodeJS script:  index.js <br>
    * JSON file: config.json <br>
 
-3) #### Fill in relevant values in config.json file.<br>
+3) #### Fill in relevant values in the .json file.<br>
    * <strong>References for config.json </strong>:
 
 4) #### Then run the code, assuming sudo access: <br>
