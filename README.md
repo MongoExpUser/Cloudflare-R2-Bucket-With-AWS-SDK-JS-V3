@@ -54,7 +54,8 @@ The  script can execute the followings:
    * JSON file: config.json <br>
 
 3) #### Fill in relevant values in the .json file.<br>
-   * <strong>References for config.json </strong>:
+   * <strong>Reference for config.json </strong>:
+     * https://developers.cloudflare.com/r2/buckets/object-lifecycles/
 
 4) #### Then run the code, assuming sudo access: <br>
    * sudo node index.js <br><br>
